@@ -1,0 +1,19 @@
+|fsm
+clk => output~reg0.CLK
+clk => state~1.DATAIN
+input => state.DATAA
+input => state.DATAB
+input => state.DATAB
+input => state.DATAB
+input => Selector2.IN5
+input => Selector2.IN1
+input => Selector2.IN2
+input => Selector0.IN1
+input => state.DATAB
+input => state.DATAB
+input => Selector1.IN1
+reset => output~reg0.ACLR
+reset => state~3.DATAIN
+output <= output~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

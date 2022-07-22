@@ -3,13 +3,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity decoder is
  port
- (
-  -- Input ports
-  decoder_in : in  STD_LOGIC_VECTOR (2 downto 0);
-
-  -- Output ports
-  decoder_out : out STD_LOGIC_VECTOR (6 downto 0)
-    );
+ ( 
+     decoder_in: in  STD_LOGIC_VECTOR (2 downto 0);  
+     decoder_out: out STD_LOGIC_VECTOR (6 downto 0)
+ );
 end decoder;
 
 architecture Behavorial of decoder is

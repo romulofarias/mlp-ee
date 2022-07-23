@@ -7,10 +7,11 @@ use ieee.std_logic_1164.all;
 entity fsm is
 
     port(
-        clk  : in   std_logic;
-        input    : in   std_logic;
-        reset    : in   std_logic;
-        output : out    std_logic
+        clk: in std_logic;
+        input: in std_logic;
+        reset: in std_logic;
+        output: out std_logic;
+        code: out std_logic_vector (8 downto 0)
     );
 
 end entity;
@@ -35,7 +36,7 @@ begin
     process (clk, reset)
     begin
         if reset = '1' then
-            state <= A; output <= '0';
+            state <= A;
         elsif (rising_edge(clk)) then
             case state is
                 when A=>
@@ -44,36 +45,29 @@ begin
                     else
                         state <= B;
                     end if;
-                    output <= '0';
                 when B=>
                     if input = '1' then
                         state <= F;
                     else
                         state <= C;
                     end if;
-                    output <= '0';
                 when C=>
                     if input = '1' then
                         state <= F;
                     else
                         state <= D;
                     end if;
-                    output <= '0';
                 when D=>
                     if input = '1' then
                         state <= F;
-                        output <= '0';
                     else
                         state <= E;
-                        output <= '1';
                     end if;
                 when E=>
                     if input = '1' then
                         state <= F;
-                        output <= '0';
                     else
                         state <= E;
-                        output <= '1';
                     end if;
                 when F=>
                     if input = '1' then
@@ -81,29 +75,23 @@ begin
                     else
                         state <= B;
                     end if;
-                    output <= '0';
                 when G=>
                     if input = '1' then
                         state <= H;
                     else
                         state <= B;
                     end if;
-                    output <= '0';
                 when H=>
                     if input = '1' then
                         state <= I;
-                        output <= '1';
                     else
                         state <= B;
-                        output <= '0';
                     end if;
                 when I=>
                     if input = '1' then
                         state <= I;
-                        output <= '1';
                     else
                         state <= B;
-                        output <= '0';
                     end if;
             end case;
         end if;
@@ -111,27 +99,35 @@ begin
 
     -- Logic to determine output code
     process (state)
-        variable code: string(1 to 9) := "000000000";
     begin
         case state is
             when A =>
-                code := "000000001";
+                code <= "000000001";
+                output <= '0';
             when B =>
-                code := "000000010";
+                code <= "000000010";
+                output <= '0';
             when C =>
-                code := "000000100";
+                code <= "000000100";
+                output <= '0';
             when D =>
-                code := "000001000";
+                code <= "000001000";
+                output <= '0';
             when E =>
-                code := "000010000";
+                code <= "000010000";
+                output <= '1';
             when F =>
-                code := "000100000";
+                code <= "000100000";
+                output <= '0';
             when G =>
-                code := "001000000";
+                code <= "001000000";
+                output <= '0';
             when H =>
-                code := "010000000";
+                code <= "010000000";
+                output <= '0';
             when I =>
-                code := "100000000";
+                code <= "100000000";
+                output <= '1';
         end case;
     end process;
 

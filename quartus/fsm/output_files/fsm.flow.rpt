@@ -1,5 +1,5 @@
 Flow report for fsm
-Tue Jul 19 21:48:17 2022
+Sat Jul 23 21:18:15 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Jul 19 21:48:17 2022           ;
+; Flow Status                        ; Successful - Sat Jul 23 21:18:15 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; fsm                                             ;
 ; Top-level Entity Name              ; fsm                                             ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 18 / 33,216 ( < 1 % )                           ;
-;     Total combinational functions  ; 18 / 33,216 ( < 1 % )                           ;
-;     Dedicated logic registers      ; 10 / 33,216 ( < 1 % )                           ;
-; Total registers                    ; 10                                              ;
-; Total pins                         ; 4 / 475 ( < 1 % )                               ;
+; Total logic elements               ; 17 / 33,216 ( < 1 % )                           ;
+;     Total combinational functions  ; 17 / 33,216 ( < 1 % )                           ;
+;     Dedicated logic registers      ; 9 / 33,216 ( < 1 % )                            ;
+; Total registers                    ; 9                                               ;
+; Total pins                         ; 13 / 475 ( 3 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/19/2022 21:47:57 ;
+; Start date & time ; 07/23/2022 21:17:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; fsm                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.165827807709946      ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 0.165862187605364      ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL) ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                     ; --            ; --          ; --             ;
@@ -92,12 +92,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 593 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 705 MB              ; 00:00:06                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 554 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 485 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 777 MB              ; 00:00:00                           ;
-; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:11                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 593 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 705 MB              ; 00:00:06                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 540 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 497 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 777 MB              ; 00:00:00                           ;
+; Total                     ; 00:00:11     ; --                      ; --                  ; 00:00:11                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

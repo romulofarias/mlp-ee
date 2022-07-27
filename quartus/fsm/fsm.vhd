@@ -35,9 +35,10 @@ begin
     -- Logic to advance to the next state
     process (clk, reset)
     begin
-        if reset = '1' then
-            state <= A;
-        elsif (rising_edge(clk)) then
+        if falling_edge(clk) then
+            if reset = '0' then
+                state <= A;
+            else
             case state is
                 when A=>
                     if input = '1' then
@@ -94,6 +95,7 @@ begin
                         state <= B;
                     end if;
             end case;
+				end if;
         end if;
     end process;
 

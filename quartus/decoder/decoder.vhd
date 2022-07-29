@@ -5,7 +5,7 @@ entity decoder is
  port
  ( 
      decoder_in: in  STD_LOGIC_VECTOR (2 downto 0);  
-     decoder_out: out STD_LOGIC_VECTOR (6 downto 0)
+     decoder_out: out STD_LOGIC_VECTOR (0 to 6)
  );
 end decoder;
 

@@ -16,9 +16,8 @@ entity counter is
     (
         clk: in std_logic;
         reset: in std_logic;
-        enable: in std_logic;
-        --q         : out integer range MIN_COUNT to MAX_COUNT
-        HEX0: out std_logic_vector (6 downto 0)
+        enable: in std_logic;        
+        HEX0: out std_logic_vector (0 to 6)
     );
 end entity;
 
@@ -27,7 +26,7 @@ architecture rtl of counter is
     port
 	(
 		decoder_in: in  STD_LOGIC_VECTOR (2 downto 0);
- 		decoder_out: out STD_LOGIC_VECTOR (6 downto 0)
+ 		decoder_out: out STD_LOGIC_VECTOR (0 to 6)
     );
     end component;
     signal q: std_logic_vector (2 downto 0);
@@ -36,7 +35,7 @@ begin
     process (clk)
         variable cnt: integer range MIN_COUNT to MAX_COUNT;
     begin
-        if reset = '1' then
+        if reset = '1' then --reset assincrono
             cnt := 0;
         elsif rising_edge(clk) then
             if enable = '1' then
